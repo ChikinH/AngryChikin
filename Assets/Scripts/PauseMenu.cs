@@ -13,16 +13,19 @@ public class PauseMenu : MonoBehaviour
 		HidePauseMenu();
 	}
 
+    /* set the game in pause and display a menu */
     public void Pause(){
     	Time.timeScale = 0f;
     	DisplayPauseMenu();
     }
 
+    /* un pause the game */
     public void unPause(){
     	Time.timeScale = 1f;
     	HidePauseMenu();
     }
 
+    /* going back to main menu */
     public void Leave(){
     	unPause();
     	Scene active = SceneManager.GetActiveScene();
@@ -30,6 +33,8 @@ public class PauseMenu : MonoBehaviour
     	SceneManager.UnloadScene(active);
     }
 
+
+    /* reset the level */
     public void Reset(){
     	unPause();
     	Scene active = SceneManager.GetActiveScene();

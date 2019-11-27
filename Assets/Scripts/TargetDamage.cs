@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/* same as PlankDamage, but for the bird */
 public class TargetDamage : MonoBehaviour
 {
 

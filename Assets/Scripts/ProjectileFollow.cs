@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/* moves of the camera */
 public class ProjectileFollow : MonoBehaviour
 {
 
@@ -16,6 +17,8 @@ public class ProjectileFollow : MonoBehaviour
 		setCamera();
 	}
 
+    /* the camera follows the projectile when it's shot
+    or follow the mouse */
     void Update()
     {
     	if(projectiles.transform.childCount > 0 && projectile != projectiles.transform.GetChild(0).gameObject) setCamera();
@@ -45,6 +48,7 @@ public class ProjectileFollow : MonoBehaviour
         }
     }
 
+    /* initiate the camera on the first projectile */
     void setCamera(){
     	projectile = projectiles.transform.GetChild(0).gameObject;
 

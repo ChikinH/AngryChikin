@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/* script for the bomb, same as ProjectileDragging (should work with heritage)
+And implements the explosions (but can't check if it really works, need to study the problem) */
 public class BombDragging : MonoBehaviour
 {
     public float maxStretch = 3.0f;

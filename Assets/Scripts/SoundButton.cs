@@ -4,6 +4,7 @@ using UnityEngine.UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/* event on the sound button to active/desactivate the music */
 public class SoundButton : MonoBehaviour
 {
 	public Button button;

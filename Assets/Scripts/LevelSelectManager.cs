@@ -4,18 +4,21 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+/* manage the level selector menu*/
 public class LevelSelectManager : MonoBehaviour
 {
 
 	public GameObject levelSelectMenu;
 	public GameObject menu;
 
+	/* indicate the build index of the level to declenche on click for button 1 */
 	private int levelIndicator;
 
 	void Awake(){
 		levelIndicator = 2;
 	}
 
+	/* set the text on the buttons */
 	public void initiateMenu(){
 		Scene scene;
 
@@ -38,22 +41,26 @@ public class LevelSelectManager : MonoBehaviour
 		else levelSelectMenu.transform.GetChild(4).gameObject.SetActive(false);
 	}
 
+	/* on click to show the 4 nexts choise */
 	public void nextMenu(){
 		levelIndicator += 4;
 		initiateMenu();
 	}
 
+	/* same but previous */
 	public void prevMenu(){
 		levelIndicator -= 4;
 		initiateMenu();
 	}
 
+	/* on click, back to main menu */
 	public void backToMenu(){
 		levelIndicator = 2;
 		menu.SetActive(true);
 		levelSelectMenu.SetActive(false);
 	}
 
+	/* the 4 next load the level corresponding */
 	public void loadLevel1(){
     	SceneManager.LoadScene(levelIndicator, LoadSceneMode.Additive);
     	SceneManager.UnloadScene(SceneManager.GetSceneByName("Menu"));
